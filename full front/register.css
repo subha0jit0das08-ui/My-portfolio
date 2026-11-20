@@ -1,0 +1,210 @@
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page background */
+body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("mountain.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    font-family: "Clarity City", sans-serif;
+}
+.box {
+    width: 100%;
+    max-width: 500px;
+    min-height: 600px;
+    padding: 35px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+.reg {
+    width: 100%;
+    margin-bottom: 35px;
+
+    text-align: center;
+    font-size: clamp(28px, 5vw, 40px);
+    font-weight: 600;
+    color: rgba(65, 191, 230, 0.9);
+    text-decoration: underline;
+    overflow-wrap: anywhere;
+}
+.box form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 22px;
+}
+input {
+    width: 100%;
+    min-width: 0;
+    padding: 14px 18px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    outline: none;
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, 0.12);
+    color: white;
+    font-size: 17px;
+
+    text-align: left;
+    transition: background 0.3s, box-shadow 0.3s,
+                border-color 0.3s;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+input:focus,
+input:hover {
+    background: rgba(58, 103, 145, 0.4);
+    border-color: rgba(65, 191, 230, 0.8);
+    box-shadow: 0 0 12px rgba(65, 191, 230, 0.2);
+}
+
+/* Button */
+button,
+button.btn {
+    width: 100%;
+    padding: 14px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+
+    background: rgba(1, 79, 147, 0.35);
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s,
+                box-shadow 0.3s;
+}
+
+button:hover,
+button.btn:hover {
+    background: rgba(58, 103, 145, 0.8);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Paragraph and links */
+p {
+    margin-top: 22px;
+    text-align: center;
+    line-height: 1.6;
+    color: white;
+}
+
+a {
+    display: inline-block;
+    margin-top: 12px;
+
+    text-align: center;
+    text-decoration: none;
+    color: #8edfff;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Icons, if used inside the form */
+i {
+    position: static;
+}
+
+/* Tablet and small laptop screens */
+@media (max-width: 768px) {
+    .box {
+        max-width: 450px;
+        min-height: auto;
+        padding: 30px;
+    }
+
+    .box form {
+        gap: 18px;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+    body {
+        padding: 14px;
+    }
+
+    .box {
+        width: 100%;
+        min-height: auto;
+        padding: 24px 20px;
+        border-radius: 20px;
+    }
+
+    .reg {
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+
+    input {
+        font-size: 16px;
+        padding: 13px;
+    }
+
+    button,
+    button.btn {
+        font-size: 16px;
+        padding: 13px;
+    }
+
+    p {
+        font-size: 14px;
+        margin-top: 16px;
+    }
+
+    a {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+}
+
+/* Short screens: allow the page to scroll */
+@media (max-height: 650px) {
+    body {
+        align-items: flex-start;
+        overflow-y: auto;
+    }
+
+    .box {
+        margin: auto 0;
+    }
+}
